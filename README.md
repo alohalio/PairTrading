@@ -65,7 +65,15 @@ Entry and Exit Rules:
 
 ## Backtesting
 
-The backtest evaluates the strategy's performance while accounting for transaction costs (0.1% commission fees and 0.1% slippage) to simulate real-world conditions. The gross profit is calculated as:[\text{Gross Profit} = \text{Position}{t-1} \cdot (\text{Instrument A % change} - \beta \cdot \text{Instrument B % change})]To account for transaction costs, the net profit adjusts for fees and slippage when positions change:[\text{Net Profit} =\begin{cases}\text{Gross Profit} - 2 \cdot (\text{Fees} + \text{Slippage}), & \text{if } \text{Position}{t-1} \neq \text{Position}_{t-2} \\text{Gross Profit}, & \text{otherwise}\end{cases}]The factor of 2 accounts for trading two assets simultaneously in pair trading. The backtest uses close price data, ensuring signals are based on the previous period's close to avoid lookahead bias.
+The backtest evaluates the strategy's performance while accounting for transaction costs (0.1% commission fees and 0.1% slippage) to simulate real-world conditions
+
+The gross profit is calculated as:
+- Gross Profit = Position(t-1) x (Instrument A % change - β x Instrument B % change).
+
+To account for transaction costs, the net profit adjusts for fees and slippage when positions change:
+- Net Profit = Gross Profit - 2 x (Fees + Slippage), if Position(t-1) ≠ Position(t-2) else Gross Profit.
+
+The factor of 2 accounts for trading two assets simultaneously in pair trading. The backtest uses close price data, ensuring signals are based on the previous period's close to avoid lookahead bias.
 
 The backtest outputs four performance metrics for each pair:
 - Benchmark: Cumulative returns of holding both assets (Instrument A + β × Instrument B).

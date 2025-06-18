@@ -50,9 +50,10 @@ The strategy focuses on five example pairs with sufficient data points within th
 
 ### Strategy Logic
 
-Spread Calculation: [\text{Spread} = \log(\text{Instrument A}) - \beta \cdot \log(\text{Instrument B})]
+Spread Calculation: log(Instrument A) - β x log(Instrument B)
 
-Z-Score Calculation: [\text{Z-Score} = \frac{\text{Spread} - \text{Spread.rolling(lookback).mean()}}{\text{Spread.rolling(lookback).std()}}] The default lookback period is 5 days. To avoid lookahead bias, the z-score is computed using a rolling mean and standard deviation.
+Z-Score Calculation: (Spread- Spread.rolling(lookback).mean()) / Spread.rolling(lookback).std()
+The default lookback period is 5 days, to avoid lookahead bias, the z-score is computed using a rolling mean and standard deviation.
 
 ![Each Pair's Z-Score](https://github.com/alohalio/PairTrading/blob/main/pics/zscore.png)
 
@@ -70,6 +71,12 @@ The backtest outputs four performance metrics for each pair:
 - Strategy (Exclude Fees & Slippage): Cumulative returns without transaction costs.
 - Strategy (Include Fees): Cumulative returns with commission fees.
 - Strategy (Include Fees & Slippage): Cumulative returns with both fees and slippage.
+
+![BTC/TRX Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/btc_trx.png)
+![SOL/RAY Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/sol_ray.png)
+![BNB/AAVE Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/bnb_aave.png)
+![ADA/XLM Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/ada_xlm.png)
+![DOT/JTO Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/dot_jto.png)
 
 ## Visualization
 

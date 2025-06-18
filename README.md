@@ -55,6 +55,7 @@ Spread Calculation: log(Instrument A) - β x log(Instrument B)
 Z-Score Calculation: (Spread- Spread.rolling(lookback).mean()) / Spread.rolling(lookback).std()
 The default lookback period is 5 days, to avoid lookahead bias, the z-score is computed using a rolling mean and standard deviation.
 
+#### Each Pair's Z-Score
 ![Each Pair's Z-Score](https://github.com/alohalio/PairTrading/blob/main/pics/zscore.png)
 
 Entry and Exit Rules:
@@ -72,10 +73,21 @@ The backtest outputs four performance metrics for each pair:
 - Strategy (Include Fees): Cumulative returns with commission fees.
 - Strategy (Include Fees & Slippage): Cumulative returns with both fees and slippage.
 
+### Results
+
+#### BTC/TRX Benchmark vs Strategy Cumulative Returns
 ![BTC/TRX Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/btc_trx.png)
+
+#### SOL/RAY Benchmark vs Strategy Cumulative Returns
 ![SOL/RAY Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/sol_ray.png)
+
+#### BNB/AAVE Benchmark vs Strategy Cumulative Returns
 ![BNB/AAVE Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/bnb_aave.png)
+
+#### ADA/XLM Benchmark vs Strategy Cumulative Returns
 ![ADA/XLM Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/ada_xlm.png)
+
+#### DOT/JTO Benchmark vs Strategy Cumulative Returns
 ![DOT/JTO Benchmark vs Strategy Cumulative Returns](https://github.com/alohalio/PairTrading/blob/main/pics/dot_jto.png)
 
 ## Visualization

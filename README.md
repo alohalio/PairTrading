@@ -110,6 +110,7 @@ The project generates two types of interactive plots using Plotly:
 - The z-score threshold is ±1.0. Modify zscore_threshold in backtest.py to experiment with different sensitivities.
 - Visualizations use the plotly_dark template and Noto Serif Kr font. Customize in visualization.py if desired.
 - For realistic backtesting, consider using frameworks like Backtesting.py, Zipline, or VectorBT.
+- In real-world scenarios, the data should contains at least a thousand data points and a hundred position to ensure for stats significant.
 - To improve the strategy consider to applied fundamental/technical indicators, statistical model (e.g., Kalman Filter) or machine learning (e.g., Linear Regression).
 
 ## License

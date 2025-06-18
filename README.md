@@ -54,6 +54,8 @@ Spread Calculation: [\text{Spread} = \log(\text{Instrument A}) - \beta \cdot \lo
 
 Z-Score Calculation: [\text{Z-Score} = \frac{\text{Spread} - \text{Spread.rolling(lookback).mean()}}{\text{Spread.rolling(lookback).std()}}] The default lookback period is 5 days. To avoid lookahead bias, the z-score is computed using a rolling mean and standard deviation.
 
+![Each Pair's Z-Score](https://github.com/alohalio/PairTrading/blob/main/pics/zscore.png)
+
 Entry and Exit Rules:
 - Long Entry: Enter a long position in Instrument A and a short position in Instrument B when the z-score > upper threshold (default: +1.0).
 - Short Entry: Enter a short position in Instrument A and a long position in Instrument B when the z-score < lower threshold (default: -1.0).

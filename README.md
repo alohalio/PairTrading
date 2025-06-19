@@ -1,6 +1,6 @@
 # Pair Trading Project
 
-**The primary goal of this project is not alpha generation, but to illustrate research methodology and common modelling pitfalls in quant finance**
+**The primary goal of this project is not to generate robust alpha, but to demonstrate, illustrate research methodology and common modelling pitfalls in quant finance**
 
 ## Overview
 

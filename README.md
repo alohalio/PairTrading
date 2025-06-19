@@ -1,5 +1,7 @@
 # Pair Trading Project
 
+**The primary goal of this project is not alpha generation, but to illustrate research methodology and common modelling pitfalls in quant finance**
+
 ## Overview
 
 This project implements a simple pair trading strategy using cryptocurrency data from the Binance exchange. Pair trading is a market-neutral strategy that involves identifying two highly correlated assets and trading based on their price divergence. The project fetches historical price data, performs cointegration analysis to identify tradable pairs, calculates hedge ratios (β), conducts a simple backtest of the trading strategy, and generates dynamic visualizations to evaluate performance.
